@@ -1,11 +1,9 @@
 import React from 'react';
 import { Text, VStack, Heading, Flex, SimpleGrid } from '@chakra-ui/react';
-import { ColorModeSwitcher } from '../ColorModeSwitcher';
 import CategoryCard from '../Components/CategoryCard/CategoryCard';
 const HomePage = () => {
   return (
     <>
-      <ColorModeSwitcher />
       <Flex
         margin={'auto'}
         wrap={'wrap'}

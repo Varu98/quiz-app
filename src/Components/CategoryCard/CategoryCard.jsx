@@ -1,8 +1,10 @@
 import { Box, Button, Heading, Image, Text, VStack } from '@chakra-ui/react';
 import React from 'react';
 import { FaArrowAltCircleRight, FaPlay } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 const CategoryCard = () => {
+  const navigate = useNavigate();
   return (
     <Box
       background={'whiteAlpha.50'}
@@ -33,6 +35,9 @@ const CategoryCard = () => {
           size={'lg'}
           variant="ghost"
           colorScheme={'blue'}
+          onClick={() => {
+            navigate('rules');
+          }}
         >
           Play
         </Button>
