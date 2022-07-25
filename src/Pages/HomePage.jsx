@@ -14,7 +14,7 @@ const HomePage = () => {
       >
         <VStack spacing={'10'}>
           <Heading fontSize={['5xl', '5xl', '9xl']} flexBasis={'1'} as="h1">
-            Quizly.io
+            Quizzly.io
           </Heading>
           <Text
             px={['10', '24', '52']}
