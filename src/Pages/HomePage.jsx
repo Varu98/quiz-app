@@ -1,11 +1,10 @@
 import React from 'react';
 import { Text, VStack, Heading, Flex, SimpleGrid } from '@chakra-ui/react';
-import { ColorModeSwitcher } from '../ColorModeSwitcher';
-import CategoryCard from '../Components/CategoryCard/CategoryCard';
+import GOTCategoryCard from '../Components/CategoryCard/GOTCategoryCard';
+import PanchayatCategoryCard from '../Components/CategoryCard/PanchayatCategoryCard';
 const HomePage = () => {
   return (
     <>
-      <ColorModeSwitcher />
       <Flex
         margin={'auto'}
         wrap={'wrap'}
@@ -32,15 +31,13 @@ const HomePage = () => {
           templateColumns={{
             base: '1',
             md: 'repeat(2,1fr)',
-            lg: 'repeat(4,1fr)',
+            lg: 'repeat(2,1fr)',
           }}
           gap="10"
           p="10"
         >
-          <CategoryCard />
-          <CategoryCard />
-          <CategoryCard />
-          <CategoryCard />
+          <GOTCategoryCard />
+          <PanchayatCategoryCard />
         </SimpleGrid>
       </Flex>
     </>
