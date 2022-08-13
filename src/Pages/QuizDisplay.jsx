@@ -1,5 +1,5 @@
-import { Box, Button } from '@chakra-ui/react';
-import React, { useEffect, useState } from 'react';
+import { Box } from '@chakra-ui/react';
+import React, { useEffect } from 'react';
 import GOTQuizCard from '../Components/GOTQuizCard';
 import PanchayatQuizCard from '../Components/PanchayatQuizCard';
 import { useData } from '../Context/DataContext';
@@ -12,6 +12,7 @@ const QuizDisplay = () => {
   useEffect(() => {
     console.log(gameOfThrones);
     console.log(panchayat);
+    // eslint-disable-next-line
   }, [dataState]);
 
   return (

@@ -1,10 +1,8 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from 'firebase/app';
-import { getDoc, getDocs, getFirestore } from 'firebase/firestore';
+import { getFirestore } from 'firebase/firestore';
 import { collection, addDoc } from 'firebase/firestore';
-import { useEffect } from 'react';
-import { data } from './backend/data';
-import { got } from './backend/got';
+
 import { panchayat } from './backend/panchayat';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries

@@ -17,12 +17,14 @@ const DataProvider = ({ children }) => {
     (async () => {
       await getGOTData(navigate, dataDispatch);
     })();
+    // eslint-disable-next-line
   }, []);
 
   useEffect(() => {
     (async () => {
       await getPanchayatData(navigate, dataDispatch);
     })();
+    // eslint-disable-next-line
   }, []);
 
   return (
