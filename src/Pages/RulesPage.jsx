@@ -8,11 +8,12 @@ import {
 } from '@chakra-ui/react';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { sendData } from '../firebase-config';
 
 const RulesPage = () => {
   const navigate = useNavigate();
   return (
-    <SimpleGrid spacing={'10'} px="10" placeContent="center" minH="100vh">
+    <SimpleGrid spacing={'10'} px="10" justifyContent="center" minH="100vh">
       <Heading>Rules</Heading>
       <Text maxWidth={'lg'} fontSize="2xl">
         Before we attempt the quiz a few pointers to keep in mind...
@@ -43,7 +44,9 @@ const RulesPage = () => {
       </Button>
       <Button
         onClick={() => {
-          navigate('/');
+          // navigate('/');
+          // sendData();
+          // getData();
         }}
         color={'white'}
         colorScheme={'blue'}

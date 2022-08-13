@@ -1,10 +1,13 @@
 import { Box, Button, Heading, Image, Text, VStack } from '@chakra-ui/react';
-import React from 'react';
-import { FaArrowAltCircleRight, FaPlay } from 'react-icons/fa';
+import { FaArrowAltCircleRight } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
+import { useData } from '../../Context/DataContext';
+import { DISPLAY_GOT_QUIZ } from '../../Reducers/Constants';
 
-const CategoryCard = () => {
+const GOTCategoryCard = () => {
   const navigate = useNavigate();
+  const { dataDispatch } = useData();
+
   return (
     <Box
       background={'whiteAlpha.50'}
@@ -13,14 +16,14 @@ const CategoryCard = () => {
       boxShadow="lg"
       p={'5'}
     >
-      <VStack spacing={'5'}>
+      <VStack justifyContent={'space-between'} spacing={'5'}>
         <Image src="https://m.media-amazon.com/images/M/MV5BNGI0NzNiZjItZDMyMS00ODZjLWIxZDAtNDc5ZGQ0NzQ0ZDAzXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg" />
         <Heading>Game Of Thrones</Heading>
         <Text fontSize={'sm'} as="b">
           "A mind needs books like a sword needs a whetstone." — Tyrion
           Lannister
         </Text>
-        <Text noOfLines={'3'} fontSize={'xs'} as={'i'}>
+        <Text noOfLines={'8'} fontSize={'xs'} as={'i'}>
           Game of Thrones is an American fantasy drama television series created
           by David Benioff and D. B. Weiss for HBO. It is an adaptation of A
           Song of Ice and Fire, a series of fantasy novels by George R. R.
@@ -37,6 +40,10 @@ const CategoryCard = () => {
           colorScheme={'blue'}
           onClick={() => {
             navigate('rules');
+            dataDispatch({
+              type: DISPLAY_GOT_QUIZ,
+              payload: 'got',
+            });
           }}
         >
           Play
@@ -46,4 +53,4 @@ const CategoryCard = () => {
   );
 };
 
-export default CategoryCard;
+export default GOTCategoryCard;
